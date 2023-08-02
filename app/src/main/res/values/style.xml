@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="MainMenuTitle">
+        <item name="android:textSize">70sp</item>
+        <item name="fontFamily">sans-serif-black</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:shadowColor">#000000</item>
+        <item name="android:shadowDx">5</item>
+        <item name="android:shadowDy">5</item>
+        <item name="android:shadowRadius">5</item>
+    </style>
+
+    <style name="ButtonSearch">
+        <item name="android:textSize">30sp</item>
+        <item name="fontFamily">sans-serif-condensed-medium</item>
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+
+</resources>

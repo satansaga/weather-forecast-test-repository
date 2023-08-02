@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">weather-forecast-test-repository</string>
+    <!-- main menu -->
+    <string name="text_main_menu_title">WEATHER\nTODAY</string>
+    <string name="text_input_hint">Your City</string>
+    <string name="text_search_city">SEARCH</string>
 </resources>
