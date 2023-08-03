@@ -25,7 +25,7 @@
     </style>
 
     <style name="TextCity">
-        <item name="android:textSize">60sp</item>
+        <item name="android:textSize">55sp</item>
         <item name="fontFamily">sans-serif-black</item>
         <item name="android:textColor">#ffffffff</item>
         <item name="android:shadowColor">#000000</item>

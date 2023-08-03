@@ -1,5 +1,7 @@
 package com.example.weather_forecast_test_repository.dataclass
 
+import kotlin.math.roundToInt
+
 data class WeatherResult(
     val message: String,
     val cod: String,
