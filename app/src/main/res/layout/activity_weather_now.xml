@@ -21,12 +21,12 @@
         android:id="@+id/layout_text_input"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        app:layout_constraintWidth_percent="0.75"
         android:layout_marginTop="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginHorizontal="10dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@id/button_search"
-        app:layout_constraintWidth_percent="0.75"
         app:boxStrokeWidth="0dp"
         app:boxStrokeWidthFocused="0dp"
         app:boxCornerRadiusTopStart="35dp"
@@ -56,6 +56,7 @@
         app:layout_constraintBottom_toBottomOf="@id/layout_text_input"
         app:layout_constraintLeft_toRightOf="@id/layout_text_input"
         app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="10dp"
         app:rippleColor="@color/white"
         android:backgroundTint="@color/purple_700"
         android:src="@drawable/ic_search"
@@ -84,7 +85,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintWidth_percent="0.85"
-        app:layout_constraintHeight_percent="0.3"
+        app:layout_constraintHeight_percent="0.4"
         app:layout_constraintTop_toBottomOf="@id/text_city"
         app:layout_constraintBottom_toTopOf="@id/layout_humidity"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -99,15 +100,88 @@
             />
 
         <TextView
+            android:id="@+id/text_temperature_actual"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=""
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/text_temperature_feeling"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:text="35°C"
+            style="@style/TextTemperature"
+            app:layout_constraintVertical_chainStyle="spread_inside"
             />
 
-        <ImageView
+        <TextView
+            android:id="@+id/text_temperature_feeling"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="material_sym"/>
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/text_temperature_actual"
+            app:layout_constraintBottom_toTopOf="@id/button_temp_toggle"
+            app:layout_constraintLeft_toLeftOf="@id/text_temperature_actual"
+            app:layout_constraintRight_toRightOf="@id/text_temperature_actual"
+            android:text="35°C"
+            style="@style/TextTemperature.Secondary"
+            />
+
+        <TextView
+            android:id="@+id/text_actual_temp_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@id/text_temperature_actual"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/text_temperature_actual"
+            app:layout_constraintBottom_toBottomOf="@id/text_temperature_actual"
+            style="@style/TextTemperature.Desc"
+            android:text="@string/text_actual_temp_desc"
+            android:gravity="left"
+            />
+
+        <TextView
+            android:id="@+id/text_felling_temp_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="@id/text_actual_temp_desc"
+            app:layout_constraintRight_toRightOf="@id/text_actual_temp_desc"
+            app:layout_constraintTop_toTopOf="@id/text_temperature_feeling"
+            app:layout_constraintBottom_toBottomOf="@id/text_temperature_feeling"
+            style="@style/TextTemperature.Desc"
+            android:text="@string/text_feeling_temp_desc"
+            android:gravity="left"
+            />
+
+        <TextView
+            android:id="@+id/text_temp_scale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            app:layout_constraintTop_toTopOf="@id/button_temp_toggle"
+            app:layout_constraintBottom_toBottomOf="@id/button_temp_toggle"
+            app:layout_constraintRight_toLeftOf="@id/button_temp_toggle"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:text="@string/text_temp_scale"
+            style="@style/TextTemperature.Desc"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            />
+
+        <androidx.appcompat.widget.AppCompatToggleButton
+            android:id="@+id/button_temp_toggle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintWidth_percent="0.5"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintTop_toBottomOf="@id/text_temperature_feeling"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/text_temp_scale"
+            app:layout_constraintRight_toRightOf="parent"
+            android:textOff="@string/text_celsius"
+            android:textOn="@string/text_fahrenheit"
+            style="@style/TextTemperature.Desc"
+            android:background="@drawable/bg_layout_data"
+            />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -120,13 +194,40 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintWidth_percent="0.85"
-        app:layout_constraintHeight_percent="0.2">
+        app:layout_constraintHeight_percent="0.15">
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:src="@drawable/bg_layout_data"
             android:alpha="0.5"
+            />
+
+        <TextView
+            android:id="@+id/text_humidity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:text="35°C"
+            style="@style/TextTemperature"
+
+            />
+
+        <TextView
+            android:id="@+id/text_humid_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            app:layout_constraintLeft_toRightOf="@id/text_humidity"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/text_humidity"
+            app:layout_constraintBottom_toBottomOf="@id/text_humidity"
+            style="@style/TextTemperature.Desc"
+            android:text="@string/text_humid_desc"
+            android:gravity="left"
             />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

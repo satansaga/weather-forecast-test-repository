@@ -6,4 +6,11 @@
     <string name="text_search_city">SEARCH</string>
     <!-- data page -->
     <string name="text_full_day_button">GET FULL DAY FORECAST</string>
+    <string name="text_temperature">%s°%s</string>
+    <string name="text_actual_temp_desc">Actual\nTemperature</string>
+    <string name="text_feeling_temp_desc">Feeling\nTemperature</string>
+    <string name="text_celsius">CELSIUS</string>
+    <string name="text_fahrenheit">FAHRENHEIT</string>
+    <string name="text_temp_scale">Scale</string>
+    <string name="text_humid_desc">Humidity</string>
 </resources>
