@@ -18,4 +18,20 @@
         <item name="android:textColor">#ffffffff</item>
     </style>
 
+    <style name="ButtonSearch.SearchPage">
+        <item name="android:textSize">20sp</item>
+        <item name="fontFamily">sans-serif-condensed-medium</item>
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+
+    <style name="TextCity">
+        <item name="android:textSize">60sp</item>
+        <item name="fontFamily">sans-serif-black</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:shadowColor">#000000</item>
+        <item name="android:shadowDx">4</item>
+        <item name="android:shadowDy">4</item>
+        <item name="android:shadowRadius">4</item>
+    </style>
+
 </resources>

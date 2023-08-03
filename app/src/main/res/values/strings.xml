@@ -4,4 +4,6 @@
     <string name="text_main_menu_title">WEATHER\nTODAY</string>
     <string name="text_input_hint">Your City</string>
     <string name="text_search_city">SEARCH</string>
+    <!-- data page -->
+    <string name="text_full_day_button">GET FULL DAY FORECAST</string>
 </resources>
