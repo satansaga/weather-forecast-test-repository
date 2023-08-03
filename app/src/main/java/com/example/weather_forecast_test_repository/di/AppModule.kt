@@ -1,7 +1,6 @@
 package com.example.weather_forecast_test_repository.di
 
 import android.app.Application
-import com.example.weather_forecast_test_repository.BuildConfig
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 import org.koin.core.module.Module
@@ -15,7 +14,7 @@ class AppModule : Application() {
         startKoin {
             androidContext(app)
             listOf<Module>(
-
+                weatherModule
             )
         }
     }
