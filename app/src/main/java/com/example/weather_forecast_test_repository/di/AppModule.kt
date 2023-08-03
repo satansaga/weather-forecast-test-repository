@@ -13,8 +13,10 @@ class AppModule : Application() {
     private fun initKoin(app: Application) {
         startKoin {
             androidContext(app)
-            listOf<Module>(
-                weatherModule
+            modules(
+                listOf<Module>(
+                    weatherModule
+                )
             )
         }
     }

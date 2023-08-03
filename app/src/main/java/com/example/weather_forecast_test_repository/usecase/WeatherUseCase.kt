@@ -4,13 +4,18 @@ import com.example.weather_forecast_test_repository.api.WeatherRepository
 import com.example.weather_forecast_test_repository.dataclass.WeatherResult
 
 interface WeatherUseCase {
-    fun execute(city: String): UseCaseResult<WeatherResult>
+    suspend fun execute(city: String): UseCaseResult<WeatherResult>
 }
 
 class WeatherUseCaseImplement(
     val remoteDataSource: WeatherRepository
 ): WeatherUseCase {
-    override fun execute(city: String): UseCaseResult<WeatherResult> {
-        TODO("Not yet implemented")
+    override suspend fun execute(city: String): UseCaseResult<WeatherResult> {
+        return try {
+            val result = remoteDataSource.weather(city = city)
+            UseCaseResult.Success(result)
+        } catch(ex: Exception) {
+            UseCaseResult.Error(ex)
+        }
     }
 }
