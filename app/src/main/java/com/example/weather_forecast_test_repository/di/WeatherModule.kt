@@ -18,4 +18,10 @@ val weatherModule = module {
     single <WeatherRepository> {
         RetrofitBuilder().build()
     }
+
+    viewModel {
+        WeatherViewModel(
+            weatherUseCase = get()
+        )
+    }
 }
