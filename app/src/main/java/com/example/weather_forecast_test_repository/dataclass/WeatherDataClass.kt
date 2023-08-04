@@ -1,5 +1,6 @@
 package com.example.weather_forecast_test_repository.dataclass
 
+import android.content.Context
 import kotlin.math.roundToInt
 
 data class WeatherResult(
@@ -29,4 +30,11 @@ data class WeatherMainStat(
 data class CityData(
     val id: String,
     val name: String
+)
+
+data class ForecastData(
+    val time: String,
+    val temp: String,
+    val feels_like: String,
+    val humidity: String
 )

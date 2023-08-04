@@ -16,5 +16,11 @@
     <string name="text_humid_desc">Humidity</string>
     <!-- forecast page -->
     <string name="date_format">yyyy-MM-dd HH:mm:ss</string>
-
+    <string name="text_header_forecast">Forecast result for next 24 hours</string>
+    <string name="text_forecast_temp_desc">Actual</string>
+    <string name="text_forecast_feel_desc">Feeling</string>
+    <string name="text_forecast_humid_desc">Humid</string>
+    <string name="text_header_forecast_result">Forecast Result</string>
+    <string name="text_second_header_forecast_result">(Next 24 Hrs)</string>
+    <string name="error_blank_city_name">Please fill in your city name</string>
 </resources>
