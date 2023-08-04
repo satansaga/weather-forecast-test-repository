@@ -1,3 +1,27 @@
 <resources>
     <string name="app_name">weather-forecast-test-repository</string>
+    <!-- main menu -->
+    <string name="text_main_menu_title">WEATHER\nTODAY</string>
+    <string name="text_input_hint">Your City</string>
+    <string name="text_search_city">SEARCH</string>
+    <!-- weather page -->
+    <string name="text_full_day_button">GET FULL DAY FORECAST</string>
+    <string name="text_temperature">%1$s°%2$s</string>
+    <string name="text_humidity">%d%%</string>
+    <string name="text_actual_temp_desc">Actual\nTemperature</string>
+    <string name="text_feeling_temp_desc">Feeling\nTemperature</string>
+    <string name="text_celsius">CELSIUS</string>
+    <string name="text_fahrenheit">FAHRENHEIT</string>
+    <string name="text_temp_scale">Scale</string>
+    <string name="text_humid_desc">Humidity</string>
+    <!-- forecast page -->
+    <string name="date_format">yyyy-MM-dd HH:mm:ss</string>
+    <string name="text_header_forecast">Forecast result for next 24 hours</string>
+    <string name="text_forecast_temp_desc">Actual</string>
+    <string name="text_forecast_feel_desc">Feeling</string>
+    <string name="text_forecast_humid_desc">Humid</string>
+    <string name="text_header_forecast_result">Forecast Result</string>
+    <string name="text_second_header_forecast_result">(Next 24 Hrs)</string>
+    <string name="error_blank_city_name">Please fill in your city name</string>
+    <string name="error_city_not_exist">Cannot find the city with this name</string>
 </resources>

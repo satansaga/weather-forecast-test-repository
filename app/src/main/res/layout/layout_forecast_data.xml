@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="5dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:background="@color/black">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bg_layout_data"
+        android:alpha="0.7"
+        android:elevation="1dp"/>
+
+    <TextView
+        android:id="@+id/text_forecast_time"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_constraintWidth_percent="0.35"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:gravity="center"
+        style="@style/TextTemperature.Desc"
+        android:text="2023-08-04\n20:00:00"
+        android:elevation="2dp"
+        />
+
+    <TextView
+        android:id="@+id/text_actual_temp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintWidth_percent="0.2"
+        app:layout_constraintTop_toBottomOf="@id/text_actual_desc"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/text_forecast_time"
+        app:layout_constraintRight_toLeftOf="@id/text_feeling_temp"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        android:text="35°C"
+        android:gravity="center"
+        style="@style/TextTemperature.Forecast"
+        android:elevation="2dp"
+        />
+
+    <TextView
+        android:id="@+id/text_feeling_temp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintWidth_percent="0.2"
+        app:layout_constraintTop_toBottomOf="@id/text_feeling_desc"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/text_actual_temp"
+        app:layout_constraintRight_toLeftOf="@id/text_humid"
+        android:text="35°C"
+        android:gravity="center"
+        style="@style/TextTemperature.Forecast"
+        android:elevation="2dp"
+        />
+
+    <TextView
+        android:id="@+id/text_humid"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintWidth_percent="0.2"
+        app:layout_constraintTop_toBottomOf="@id/text_humid_desc"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/text_feeling_temp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="35°C"
+        android:gravity="center"
+        style="@style/TextTemperature.Forecast"
+        android:elevation="2dp"
+        />
+
+    <TextView
+        android:id="@+id/text_actual_desc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintWidth_percent="0.2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/text_actual_temp"
+        android:layout_marginTop="5dp"
+        android:elevation="2dp"
+        style="@style/TextTemperature.ForecastDesc"
+        android:text="@string/text_forecast_temp_desc"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/text_feeling_desc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintWidth_percent="0.2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/text_feeling_temp"
+        android:layout_marginTop="5dp"
+        android:elevation="2dp"
+        style="@style/TextTemperature.ForecastDesc"
+        android:text="@string/text_forecast_feel_desc"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/text_humid_desc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintWidth_percent="0.2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/text_humid"
+        android:layout_marginTop="5dp"
+        android:elevation="2dp"
+        style="@style/TextTemperature.ForecastDesc"
+        android:text="@string/text_forecast_humid_desc"
+        android:gravity="center"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
