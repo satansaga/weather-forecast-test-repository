@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.text.TextUtils
 import android.util.DisplayMetrics
 import android.util.TypedValue
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import com.example.weather_forecast_test_repository.databinding.ActivityWeatherNowBinding
@@ -55,9 +56,13 @@ class WeatherActivity: AppCompatActivity() {
             setTemperatureView(viewModel.weatherData.value!!)
         }
         binding.searchBar.buttonSearch.setOnClickListener {
-            viewModel.getWeather(
-                binding.searchBar.layoutSearchEditText.text.toString()
-            )
+            val city = binding.searchBar.layoutSearchEditText.text.toString()
+            if(city.isEmpty()){
+                binding.searchBar.layoutSearch.error = getString(R.string.error_blank_city_name)
+            } else {
+                binding.searchBar.layoutSearch.error = ""
+                viewModel.getWeather(city)
+            }
         }
         binding.buttonFullDayForecast.setOnClickListener{
             val intent = ForecastActivity.getPage(
@@ -69,13 +74,22 @@ class WeatherActivity: AppCompatActivity() {
     }
 
     private fun initViewModel() {
-        viewModel.weatherData.observe(this, Observer {
+        viewModel.weatherData.observe(this) {
             setTemperatureView(it)
             setHumidityView(it.humidity.roundToInt())
-        })
-        viewModel.cityName.observe(this, Observer{
+        }
+        viewModel.cityName.observe(this){
             setCityName(it)
-        })
+        }
+        viewModel.showError.observe(this){
+            binding.searchBar.layoutSearch.error = getString(R.string.error_city_not_exist)
+        }
+        viewModel.unlockLayout.observe(this){
+            binding.textCity.visibility = View.VISIBLE
+            binding.layoutTemperature.visibility = View.VISIBLE
+            binding.layoutHumidity.visibility = View.VISIBLE
+            binding.buttonFullDayForecast.visibility = View.VISIBLE
+        }
     }
 
     private fun setTemperatureView (data: WeatherMainStat) {

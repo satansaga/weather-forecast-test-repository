@@ -94,6 +94,16 @@ class ForecastActivity: AppCompatActivity() {
         viewModel.cityData.observe(this) {
             setCityName(it)
         }
+        viewModel.showError.observe(this){
+            binding.searchBar.layoutSearch.error = getString(R.string.error_city_not_exist)
+        }
+        viewModel.unlockLayout.observe(this){
+            binding.textCityName.visibility = View.VISIBLE
+            binding.textForecastHeader.visibility = View.VISIBLE
+            binding.textForecastSecondHeader.visibility = View.VISIBLE
+            binding.textTempScale.visibility = View.VISIBLE
+            binding.buttonTempToggle.visibility = View.VISIBLE
+        }
     }
 
     private fun setCityName(city: String) {

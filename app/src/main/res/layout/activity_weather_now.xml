@@ -28,7 +28,10 @@
         app:layout_constraintVertical_chainStyle="spread"
         style="@style/TextCity"
         android:gravity="center"
-        android:text="Bangkok" />
+        tools:text="Bangkok"
+        android:visibility="invisible"
+        tools:visibility="visible"
+        />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/layout_temperature"
@@ -40,6 +43,8 @@
         app:layout_constraintBottom_toTopOf="@id/layout_humidity"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
+        android:visibility="invisible"
+        tools:visibility="visible"
         >
 
         <ImageView
@@ -58,7 +63,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toTopOf="@id/text_temperature_feeling"
             app:layout_constraintLeft_toLeftOf="parent"
-            android:text="35°C"
+            tools:text="35°C"
             style="@style/TextTemperature"
             app:layout_constraintVertical_chainStyle="spread_inside"
             />
@@ -72,8 +77,8 @@
             app:layout_constraintBottom_toTopOf="@id/button_temp_toggle"
             app:layout_constraintLeft_toLeftOf="@id/text_temperature_actual"
             app:layout_constraintRight_toRightOf="@id/text_temperature_actual"
-            android:text="35°C"
-            style="@style/TextTemperature.Secondary"
+            tools:text="35°C"
+            style="@style/TextTemperature"
             />
 
         <TextView
@@ -143,7 +148,9 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintWidth_percent="0.85"
-        app:layout_constraintHeight_percent="0.15">
+        app:layout_constraintHeight_percent="0.15"
+        android:visibility="invisible"
+        tools:visibility="visible">
 
         <ImageView
             android:layout_width="match_parent"
@@ -195,6 +202,8 @@
         android:gravity="center"
         android:text="@string/text_full_day_button"
         style="@style/ButtonSearch.SearchPage"
+        android:visibility="invisible"
+        tools:visibility="visible"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

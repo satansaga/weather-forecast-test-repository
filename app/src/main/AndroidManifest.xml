@@ -29,11 +29,14 @@
         <activity
             android:name=".presentation.weather.WeatherActivity"
             android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity"/>
+            tools:ignore="LockedOrientationActivity"
+            android:windowSoftInputMode="adjustNothing"/>
         <activity
             android:name=".presentation.forecast.ForecastActivity"
             android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity"/>
+            tools:ignore="LockedOrientationActivity"
+            android:windowSoftInputMode="adjustNothing"
+            />
     </application>
 
 </manifest>

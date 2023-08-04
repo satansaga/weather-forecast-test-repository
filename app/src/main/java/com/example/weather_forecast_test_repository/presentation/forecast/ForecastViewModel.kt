@@ -17,8 +17,12 @@ class ForecastViewModel(
 ): ViewModel(), CoroutineScope {
     override val coroutineContext = Dispatchers.IO
 
+    private var firsLoad = true
+
     val forecastData = MutableLiveData<List<WeatherData>>()
     val cityData = MutableLiveData<String>()
+    val showError = MutableLiveData<Unit>()
+    val unlockLayout = MutableLiveData<Unit>()
 
     fun getForecast (city: String) {
         launch {
@@ -33,7 +37,13 @@ class ForecastViewModel(
                             it.city.name
                         )
                     }
+                    if(firsLoad){
+                        firsLoad = false
+                        unlockLayout.postValue(Unit)
+                    }
                 }
+            } else {
+                showError.postValue(Unit)
             }
         }
     }

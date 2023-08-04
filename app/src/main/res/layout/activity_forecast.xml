@@ -2,7 +2,8 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <include
         android:layout_width="match_parent"
@@ -27,16 +28,21 @@
         style="@style/TextCity"
         android:text="Bangkok"
         android:gravity="center"
+        android:visibility="invisible"
+        tools:visibility="visible"
         />
 
     <TextView
+        android:id="@+id/text_temp_scale"
         android:layout_width="55dp"
         android:layout_height="wrap_content"
         app:layout_constraintRight_toLeftOf="@id/button_temp_toggle"
         app:layout_constraintTop_toTopOf="@id/button_temp_toggle"
         app:layout_constraintBottom_toBottomOf="@id/button_temp_toggle"
         style="@style/TextTemperature.Desc"
-        android:text="@string/text_temp_scale"/>
+        android:text="@string/text_temp_scale"
+        android:visibility="invisible"
+        tools:visibility="visible"/>
 
     <TextView
         android:id="@+id/text_forecast_header"
@@ -47,6 +53,8 @@
         app:layout_constraintLeft_toLeftOf="@id/recycler_forecast"
         android:text="@string/text_header_forecast_result"
         style="@style/TextTemperature.Forecast"
+        android:visibility="invisible"
+        tools:visibility="visible"
         />
 
     <TextView
@@ -58,6 +66,8 @@
         app:layout_constraintLeft_toLeftOf="@id/recycler_forecast"
         android:text="@string/text_second_header_forecast_result"
         style="@style/TextTemperature.ForecastDesc"
+        android:visibility="invisible"
+        tools:visibility="visible"
         />
 
     <ToggleButton
@@ -71,6 +81,8 @@
         android:background="@drawable/bg_layout_data"
         android:textOff="@string/text_celsius"
         android:textOn="@string/text_fahrenheit"
+        android:visibility="invisible"
+        tools:visibility="visible"
         />
 
 

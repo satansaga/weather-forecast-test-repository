@@ -23,4 +23,5 @@
     <string name="text_header_forecast_result">Forecast Result</string>
     <string name="text_second_header_forecast_result">(Next 24 Hrs)</string>
     <string name="error_blank_city_name">Please fill in your city name</string>
+    <string name="error_city_not_exist">Cannot find the city with this name</string>
 </resources>
