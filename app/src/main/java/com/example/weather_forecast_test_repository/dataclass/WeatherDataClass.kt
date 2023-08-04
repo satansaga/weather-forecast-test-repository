@@ -5,21 +5,16 @@ import kotlin.math.roundToInt
 data class WeatherResult(
     val message: String,
     val cod: String,
-    val count: Int,
-    val list: List<WeatherData>
+    val list: List<WeatherData>,
+    val city: CityData
 )
 
 data class WeatherData(
     val id: String,
     val name: String,
-    val coord: MapPosition,
     val main: WeatherMainStat,
-    val dt: Long
-)
-
-data class MapPosition(
-    val lat: String,
-    val lon: String
+    val dt: Long,
+    val dt_txt: String
 )
 
 data class WeatherMainStat(
@@ -29,4 +24,9 @@ data class WeatherMainStat(
     val temp_max: Double,
     val pressure: Double,
     val humidity: Double,
+)
+
+data class CityData(
+    val id: String,
+    val name: String
 )
