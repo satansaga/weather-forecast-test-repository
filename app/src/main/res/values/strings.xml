@@ -4,7 +4,7 @@
     <string name="text_main_menu_title">WEATHER\nTODAY</string>
     <string name="text_input_hint">Your City</string>
     <string name="text_search_city">SEARCH</string>
-    <!-- data page -->
+    <!-- weather page -->
     <string name="text_full_day_button">GET FULL DAY FORECAST</string>
     <string name="text_temperature">%1$s°%2$s</string>
     <string name="text_humidity">%d%%</string>
@@ -14,4 +14,7 @@
     <string name="text_fahrenheit">FAHRENHEIT</string>
     <string name="text_temp_scale">Scale</string>
     <string name="text_humid_desc">Humidity</string>
+    <!-- forecast page -->
+    <string name="date_format">yyyy-MM-dd HH:mm:ss</string>
+
 </resources>

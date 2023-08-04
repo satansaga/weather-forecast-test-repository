@@ -6,12 +6,10 @@
     android:layout_height="match_parent"
     tools:context=".presentation.main.MainActivity">
 
-    <ImageView
-        android:id="@+id/bg_main_menu"
+    <include
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scaleType="centerCrop"
-        android:src="@drawable/bg_main_menu" />
+        layout="@layout/layout_bg_app" />
 
     <View
         android:id="@+id/center_point"

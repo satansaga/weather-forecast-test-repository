@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="5dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:background="@color/black">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bg_layout_data"
+        android:alpha="0.5"
+        android:elevation="1dp"/>
+
+    <TextView
+        android:id="@+id/text_forecast_time"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_constraintWidth_percent="0.4"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:gravity="center"
+        style="@style/TextTemperature.Desc"
+        android:text="2023-08-04\n20:00:00"
+        android:elevation="2dp"
+        />
+
+    <TextView
+        android:id="@+id/text_actual_temp"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_constraintWidth_percent="0.2"
+        app:layout_constraintLeft_toRightOf="@id/text_forecast_time"
+        android:text="35°C"
+        android:gravity="center"
+        style="@style/TextTemperature.Forecast"
+        android:elevation="2dp"
+        />
+
+    <TextView
+        android:id="@+id/text_feeling_temp"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_constraintWidth_percent="0.2"
+        app:layout_constraintLeft_toRightOf="@id/text_actual_temp"
+        android:text="35°C"
+        android:gravity="center"
+        style="@style/TextTemperature.Forecast"
+        android:elevation="2dp"
+        />
+
+    <TextView
+        android:id="@+id/text_humid"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_constraintWidth_percent="0.2"
+        app:layout_constraintLeft_toRightOf="@id/text_feeling_temp"
+        android:text="35°C"
+        android:gravity="center"
+        style="@style/TextTemperature.Forecast"
+        android:elevation="2dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
