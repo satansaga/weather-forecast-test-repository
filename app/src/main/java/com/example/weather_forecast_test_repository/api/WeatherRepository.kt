@@ -15,7 +15,7 @@ interface WeatherRepository {
     @GET("/data/2.5/forecast")
     suspend fun forecast(
         @Query("q") city: String = "Bangkok",
-        @Query("cnt") count: Int = 10,
+        @Query("cnt") count: Int = 9,
         @Query("appid") appid: String = APP_ID
     ): WeatherResult
 }

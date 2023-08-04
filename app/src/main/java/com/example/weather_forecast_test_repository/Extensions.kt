@@ -5,16 +5,16 @@ import kotlin.math.roundToInt
 
 const val KELVIN_DIFF: Double = 273.15
 
-public inline fun Double.toCelsiusText (): String {
+public fun Double.toCelsiusText (): String {
     return this.minus(KELVIN_DIFF).roundToInt().toString()
 }
 
-public inline fun Double.toFahrenheitText (): String {
+public fun Double.toFahrenheitText (): String {
     val tempF: Double = (1.80 * (this - KELVIN_DIFF)) + 32.00
     return tempF.roundToInt().toString()
 }
 
-public inline fun Double.getTemperatureText (context: Context, boolean: Boolean): String {
+public fun Double.getTemperatureText (context: Context, boolean: Boolean): String {
     return if (boolean){
         context.getString(
             R.string.text_temperature,
